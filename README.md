@@ -1,22 +1,53 @@
-# DIO - Trilha .NET - Programação orientada a objetos
-www.dio.me
+📌 DIO - Trilha .NET - Programação Orientada a Objetos
 
-## Desafio de projeto
-Para este desafio, você precisará usar seus conhecimentos adquiridos no módulo de orientação a objetos, da trilha .NET da DIO.
+Este repositório contém a solução para o desafio de projeto do módulo Programação Orientada a Objetos (POO) da DIO (Digital Innovation One)
+.
 
-## Contexto
-Você é responsável por modelar um sistema que trabalha com celulares. Para isso, foi solicitado que você faça uma abstração de um celular e disponibilize maneiras de diferentes marcas e modelos terem seu próprio comportamento, possibilitando um maior reuso de código e usando a orientação a objetos.
+🚀 Desafio de Projeto
 
-## Proposta
-Você precisa criar um sistema em .NET, do tipo console, mapeando uma classe abstrata e classes específicas para dois tipos de celulares: Nokia e iPhone. 
-Você deve criar as suas classes de acordo com o diagrama abaixo:
+O objetivo foi desenvolver um sistema de celulares em C#, aplicando conceitos de abstração, herança e polimorfismo.
 
-![Diagrama classes](Imagens/diagrama.png)
+O programa foi construído como uma aplicação console em .NET, seguindo o diagrama de classes fornecido no desafio.
 
-## Regras e validações
-1. A classe **Smartphone** deve ser abstrata, não permitindo instanciar e servindo apenas como modelo.
-2. A classe **Nokia** e **Iphone** devem ser classes filhas de Smartphone.
-3. O método **InstalarAplicativo** deve ser sobrescrito na classe Nokia e iPhone, pois ambos possuem diferentes maneiras de instalar um aplicativo.
+📖 Contexto
 
-## Solução
-O código está pela metade, e você deverá dar continuidade obedecendo as regras descritas acima, para que no final, tenhamos um programa funcional. Procure pela palavra comentada "TODO" no código, em seguida, implemente conforme as regras acima.
+O sistema simula o comportamento de diferentes modelos de celulares (Nokia e iPhone), permitindo reuso de código e diferenciação de comportamento através da orientação a objetos.
+
+📌 Regras e Validações
+
+📱 A classe Smartphone deve ser abstrata, servindo apenas como modelo.
+
+📱 As classes Nokia e iPhone devem herdar de Smartphone.
+
+📱 O método InstalarAplicativo deve ser sobrescrito nas classes filhas, simulando o comportamento específico de cada marca.
+
+🗂️ Estrutura do Projeto
+
+Smartphone.cs → Classe abstrata base para os celulares.
+
+Nokia.cs → Classe filha que implementa comportamento do Nokia.
+
+iPhone.cs → Classe filha que implementa comportamento do iPhone.
+
+Program.cs → Classe principal para execução e testes no console.
+
+🖥️ Exemplo de Uso
+Smartphone nokia = new Nokia(numero: "123456", modelo: "Nokia Tijolão", imei: "111111", memoria: 64);
+nokia.Ligar();
+nokia.InstalarAplicativo("WhatsApp");
+
+Smartphone iphone = new Iphone(numero: "987654", modelo: "iPhone 14", imei: "222222", memoria: 128);
+iphone.ReceberLigacao();
+iphone.InstalarAplicativo("Telegram");
+
+📚 Aprendizados
+
+Criação de classes abstratas em C#.
+
+Implementação de herança e polimorfismo.
+
+Diferença entre métodos virtuais e sobrescritos.
+
+Estruturação de um projeto console em .NET.
+
+✍️ Desenvolvido como parte da Trilha .NET - DIO
